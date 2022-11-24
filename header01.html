@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header 유형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* -----1번----- */
+        header {
+            margin: 100px 0;
+        }
+
+        .header01 {
+            line-height: 100px;
+            background: #f9f9f9;
+        }
+
+        .header01 h1 {
+            font-size: 0;
+        }
+
+        .header01 h1 img {
+            vertical-align: middle;
+        }
+
+        .header01 .inner {
+            display: flex;
+            justify-content: space-between;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header01 nav>ul {
+            display: flex;
+            gap: 30px;
+        }
+
+
+        /* -----2번----- */
+        .header02 {
+            line-height: 100px;
+            background: #f9f9f9;
+        }
+
+        .header02 h1 {
+            font-size: 0;
+        }
+
+        .header02 h1 img {
+            vertical-align: middle;
+        }
+
+        .header02 .inner {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header02 nav {
+            margin: 0 0 0 auto;
+        }
+
+        .header02 nav>ul {
+            display: flex;
+            gap: 30px;
+        }
+
+
+        .header02 .right {
+            margin: 0 0 0 30px;
+        }
+
+        /* ----3번---- */
+        .header03 {
+            position: relative;
+            line-height: 100px;
+            background: #f9f9f9;
+        }
+
+        .header03 h1 {
+            position: absolute;
+            top: 0;
+            left: 50px;
+            font-size: 0;
+        }
+
+        .header03 h1 img {
+            vertical-align: middle;
+        }
+
+        .header03 nav {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header03 nav>ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        .header03 nav>ul>li {
+            position: relative;
+        }
+
+        /* .header03 nav>ul>li::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: tomato;
+            transition: 0.3s;
+        } 일직선으로 움직임*/
+
+        .header03 nav>ul>li::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 0;
+            height: 3px;
+            background: tomato;
+            transition: 0.3s;
+        }
+        /* 중앙에서 양쪽으로 */
+
+        .header03 nav>ul>li:hover::after {
+            width: 100%;
+        }
+
+        .header03 .right {
+            position: absolute;
+            top: 0;
+            right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header01">
+        <div class="inner">
+            <h1>
+                <a href="/">
+                    <img src="./logo.png" alt="">
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#!">menu01</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu02</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu03</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu04</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu05</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="right">나 아이콘</div>
+        </div>
+    </header>
+
+    <header class="header02">
+        <div class="inner">
+            <h1>
+                <a href="/">
+                    <img src="./logo.png" alt="">
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#!">menu01</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu02</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu03</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu04</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu05</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="right">나 아이콘</div>
+    </header>
+
+    <header class="header03">
+        <div class="inner">
+            <h1>
+                <a href="/">
+                    <img src="./logo.png" alt="">
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#!">menu01</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu02</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu03</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu04</a>
+                    </li>
+                    <li>
+                        <a href="#!">menu05</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="right">나 아이콘</div>
+    </header>
+</body>
+
+</html>

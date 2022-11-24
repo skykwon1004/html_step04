@@ -1,0 +1,89 @@
+/* 셋팅 */
+body {
+    color: #444444;
+}
+
+.inner,
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.tit {
+    line-height: 1;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.sec {
+    padding: 100px 0;
+}
+
+/* ------ */
+.header {
+    line-height: 100px;
+}
+
+.header h1 {
+    font-size: 0;
+}
+
+.header .inner {
+    justify-content: space-between;
+    /* 메뉴 오른쪽으로 붙임 */
+}
+
+.header .gnb>ul {
+    gap: 60px;
+}
+
+.header .gnb>ul>li{
+    position: relative;
+}
+
+.header .gnb>ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 1px;
+    height: 12px; 
+    /* 폰트사이즈 16px보다 작게 */
+    background: #ddd;
+    transform: translate(0, -50%);
+}
+/* 폰트 컬러와 같거나 더 연해야 한다 보통은 width: 1px;이고 
+폰크 길이보다 길면 안된다  */
+/* ~li 형제선택자 나빼고 선택 */
+
+.maivVisual {
+    position: relative;
+    height: 700px;
+    background: url(./main01.jpg) no-repeat center center/cover;    
+}
+
+.maivVisual .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.maivVisual .inner h2 {
+    font-size: 80px;
+    font-weight: 700;
+    color: #fff;
+    /* text-indent: -4px; 
+    앞라인 맞출때 들여쓰기*/
+    margin: 0 0 35px 0;
+}
+
+.maivVisual .inner p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 25px;
+}

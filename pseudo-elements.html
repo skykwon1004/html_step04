@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo - elements 01</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        .pseudo01 {
+            padding: 100px 0;
+        }
+
+        .pseudo01 h2 {
+            text-align: center;
+            margin: 0 0 40px 0;
+        }
+
+        .pseudo01 h2::before {
+            content: "앞";
+        }
+
+        .pseudo01 h2::after {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 100px;
+            background: tomato;
+            margin: 20px auto;
+        }
+
+        .pseudo01 p {
+            text-align: center;
+            margin: 0 0 40px 0;
+        }
+
+        .pseudo02 {
+            padding: 100px 0;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .pseudo02 h2 {
+            margin: 0 0 20px 0;
+        }
+
+        .pseudo02 h2::before {
+            content: "";
+            display: inline-block;
+            /* 글자옆에 나란히 하기 위해 inline-block */
+            width: 100px;
+            height: 2px;
+            background: tomato;
+            vertical-align: middle;
+            /* 글자랑 줄맞추기 */
+            margin: 0 20px 0 0;
+        }
+
+        .pseudo02 h2::after {
+            content: "";
+            display: inline-block;
+            width: 100px;
+            height: 2px;
+            background: tomato;
+            vertical-align: middle;
+            margin: 0 0 0 20px;
+        }
+
+        .pseudo02 p {
+            margin: 0 0 40px 0;
+        }
+
+        .pseudo03 {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .pseudo03 h2 {
+            position: relative;
+            display: inline-block;
+            /* 나뭇잎 박스로 만들기 */
+            margin: 0 0 20px 0;
+        }
+
+        .pseudo03 h2::after {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: -100px;
+            width: 50px;
+            height: 35px;
+            background: rgb(10, 138, 10);
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0%;
+        }
+
+        .pseudo03 p {
+            margin: 0 0 20px 0;
+        }
+
+        .pseudo04 {
+            padding: 100px 0;
+            background: #f9f9f9;
+        }
+
+        .pseudo04 h2 {
+            text-align: center;
+            margin: 0 0 20px 0;
+        }
+
+        .pseudo04 p {
+            text-align: center;
+            margin: 0 0 40px 0;
+        }
+
+        .pseudo04 ul {
+            width: 400px;
+            margin: 0 auto;
+            list-style: none;
+            line-height: 1.6;
+        }
+
+        .pseudo04 ul>li {
+            position: relative;
+            padding: 0 0 0 15px;
+        }
+
+        .pseudo04 ul>li::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background: tomato;
+            border-radius: 100% 0% 78% 22% / 100% 13% 87% 0%;
+        }
+
+        .pseudo05 {
+            padding: 100px 0;
+
+        }
+
+        .pseudo05 h2 {
+            text-align: center;
+            margin: 0 0 20px 0;
+        }
+
+        .pseudo05 p {
+            text-align: center;
+            margin: 0 0 40px 0;
+        }
+
+        .pseudo05 ul {
+            width: 1200px;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        .pseudo05 ul li {
+            line-height: 26px;
+        }
+
+        .pseudo05 ul li::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: tomato;
+            background: url(./p01.png) no-repeat center center/contain;
+            vertical-align: middle;
+            margin: 0 15px 0 0;
+        }
+
+        .pseudo06 {
+            padding: 100px 0;
+            background: #f9f9f9;
+        }
+
+        .pseudo06 h2 {
+            text-align: center;
+            margin: 0 0 20px 0;
+        }
+
+        .pseudo06 p {
+            text-align: center;
+            margin: 0 0 40px 0;
+        }
+
+        .pseudo06 ul {
+            width: 500px;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        .pseudo06 ul li {
+            position: relative;
+            line-height: 26px;
+            padding: 0 0 0 20px;
+        }
+
+        .pseudo06 ul li::before {
+            content: "\e907";
+            font-family: xeicon !important;
+            position: absolute;
+            top: 0;
+            /* line-height: 26px; 상속받아서 top: 0 */
+            left: 0;
+            color: tomato;
+            font-size: 10px;
+        }
+
+        /* 아이콘 가져올때 웹페이지 검사
+         아이콘 content: "\e907"; 긁어서 가져오고
+         font-family: xeicon!important; 도 긁어서 가져오면됨*/
+
+         .pseudo07 {
+            padding: 100px 0;
+         }
+
+         .pseudo07 h2 {
+            text-align: center;
+            margin: 0 0 20px 0;
+         }
+
+         .pseudo07>p {
+            text-align: center;
+            margin: 0 0 40px 0;
+         }
+
+         .pseudo07 .inner {
+            display: flex;
+            grid-template-columns: repeat(3, lfr);
+            /* 3개를 반복하고 1칸씩 차지해라 */
+            gap: 30px;
+            flex-wrap: wrap;
+            /* 5개짜리를 3,2,로 배열 */
+            width: 1200px;
+            margin: 0 auto;
+         }
+
+         .pseudo07 .inner .con {
+            position: relative;
+            padding: 50px 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            /* flex: 1 0 30%; */
+            /* 사이즈 늘어나게 , 줄어들게  */
+         }
+
+         .pseudo07 .inner .con::after {
+            content: attr(data-txt);
+            position: absolute;
+            top: -25px;
+            left: -25px;
+            width: 50px;
+            height: 50px;
+            background: #333;
+            color: #fff;
+            font-size: 25px;
+            font-weight: bolder;
+            text-align: center;
+            line-height: 50px; 
+            /* 중앙에 글자 올려면 line-height 를 height: 50px;만큼 준다 */
+            border-radius: 50%;
+         }
+    </style>
+</head>
+
+<body>
+    <section class="pseudo01">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+            Dolores aperiam enim cum temporibus expedita recusandae dolore eveniet deserunt.</p>
+
+        <hr />
+        <!-- <hr /> 문장과 문장사이 띄어주는 줄 -->
+    </section>
+
+    <section class="pseudo02">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+            Dolores aperiam enim cum temporibus expedita recusandae dolore eveniet deserunt.</p>
+
+        <hr />
+    </section>
+
+    <section class="pseudo03">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+            Dolores aperiam enim cum temporibus expedita recusandae dolore eveniet deserunt.</p>
+
+        <hr />
+    </section>
+
+    <section class="pseudo04">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+            Dolores aperiam enim cum temporibus expedita recusandae dolore eveniet deserunt.</p>
+
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Dolores aperiam enim cum temporibus expedita recusandae dolore eveniet deserunt.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Dolores aperiam enim cum temporibus expedita</li>
+            <li>recusandae dolore eveniet deserunt.</li>
+        </ul>
+    </section>
+
+    <section class="pseudo05">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+            Dolores aperiam enim cum temporibus expedita recusandae dolore eveniet deserunt.</p>
+
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Dolores aperiam enim cum temporibus expedita recusandae dolore eveniet deserunt.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Dolores aperiam enim cum temporibus expedita</li>
+            <li>recusandae dolore eveniet deserunt.</li>
+        </ul>
+    </section>
+
+    <section class="pseudo06">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+            Dolores aperiam enim cum temporibus expedita recusandae dolore eveniet deserunt.</p>
+
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Dolores aperiam enim cum temporibus expedita recusandae dolore eveniet deserunt.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Dolores aperiam enim cum temporibus expedita</li>
+            <li>recusandae dolore eveniet deserunt.</li>
+        </ul>
+    </section>
+
+    <section class="pseudo07">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+            Dolores aperiam enim cum temporibus expedita recusandae dolore eveniet deserunt.</p>
+        <div class="inner">
+            <div class="con" data-txt="01">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente.</p>
+            </div>
+            <div class="con" data-txt="02">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente.</p>
+            </div>
+            <div class="con" data-txt="03">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente.</p>
+            </div>
+            <div class="con" data-txt="04">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente.</p>
+            </div>
+            <div class="con" data-txt="05">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sapiente.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

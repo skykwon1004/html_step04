@@ -1,0 +1,37 @@
+/* font, icon */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, 
+ol {
+    list-style: none; /* ul,ol의 점,숫자 없애주는것 */
+} 
+
+a {
+    color: inherit; /* a눌렀을때 색없어짐 */
+    text-decoration: none; /* a의 밑줄 없어짐 */
+}
+
+em, 
+i,
+address {
+    font-style: normal;
+}
+
+body {
+    line-height: 1; /* 글자 위아래 사이 공간 */
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
