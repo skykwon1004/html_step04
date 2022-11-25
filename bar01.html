@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bar 01</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+        .hr_line {
+            position: relative;
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 100px 0;
+            text-align: center;
+            overflow: visible;
+        }
+
+        .hr_line::after {
+            content: "\ea11";
+            font-family: xeicon;    
+            position: absolute;  
+            top: 50%;
+            left: 50%;   
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            background: #fff;
+            font-size: 30px;
+        }
+
+        .bar01 h2 {
+            display: flex;
+            align-items: center;
+        }
+        
+        .bar01 h2::before {
+            content: "";
+            display: block;
+            height: 1px;
+            background: #ddd;
+            flex: 1;
+        }
+
+        .bar01 h2::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: #ddd;
+            flex: 1;
+        }
+
+        .bar01 h2 span {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="bar01">
+        <h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, aperiam!</span>
+        </h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            <hr class="hr_line" />
+            <i class="xi-heart-o"></i>
+            Minus doloremque culpa omnis vitae libero velit magnam modi ipsa neque eligendi.
+        </p>
+    </section>
+</body>
+
+</html>

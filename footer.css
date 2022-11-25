@@ -59,20 +59,20 @@ body {
 폰크 길이보다 길면 안된다  */
 /* ~li 형제선택자 나빼고 선택 */
 
-.maivVisual {
+.mainVisual {
     position: relative;
     height: 700px;
     background: url(./main01.jpg) no-repeat center center/cover;    
 }
 
-.maivVisual .inner {
+.mainVisual .inner {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.maivVisual .inner h2 {
+.mainVisual .inner h2 {
     font-size: 80px;
     font-weight: 700;
     color: #fff;
@@ -81,9 +81,80 @@ body {
     margin: 0 0 35px 0;
 }
 
-.maivVisual .inner p {
+.mainVisual .inner p {
     font-size: 15px;
     font-weight: 300;
     color: #fff;
     line-height: 25px;
+}
+
+.mainContent {
+    padding: 100px 0;
+}
+
+.mainContent h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.mainContent p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.mainContent .inner {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mainContent figure {
+    flex: 1;
+}
+
+.mainContent figure img {
+    width: 100%;
+}
+
+/*  ------------- 여기까지 암기 */
+
+.footer {
+    padding: 50px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer .list {
+    font-size: 0; 
+    margin: 0 0 10px 0;
+}
+/* display: inline-block;하면 폰트 좌측에 조금 공간이 생겨서 
+font-size: 0; 준다 */
+
+.footer .list li {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.footer .list li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    margin: 0 10px;
+    /* vertical-align: -1px; */
+}
+
+.footer .list li:first-child:before {
+    display: none;
+}
+
+.footer .list .bold {
+    font-weight: 500;
 }
